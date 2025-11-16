@@ -27,7 +27,7 @@ test('tl-17-5 login with correct credentials and verify order creation page', as
   // verify at least few elements on the order creation page
 })
 
-test('tl-17-6 login and create order', async ({page}) => {
+test('tl-17-6 login and create order', async ({ page }) => {
   const orderCreationPage = await authPage.signIn(USERNAME, PASSWORD)
   await orderCreationPage.nameField.fill('test')
   await orderCreationPage.phoneField.fill('test1234')

@@ -33,7 +33,9 @@ export class OrderPage {
   }
 
   // condition ? true : false
-  async checkCreationPopupVisible(visible = true):Promise<void> {
-    expect(await this.successfullCreationPopup.getAttribute('class')).toContain(visible ? 'popup_opened' : 'undefined')
+  async checkCreationPopupVisible(visible = true): Promise<void> {
+    expect(await this.successfullCreationPopup.getAttribute('class')).toContain(
+      visible ? 'popup_opened' : 'undefined',
+    )
   }
 }
