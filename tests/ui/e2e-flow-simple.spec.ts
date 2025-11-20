@@ -3,8 +3,6 @@ import { LoginPage } from '../pages/login-page'
 import { faker } from '@faker-js/faker/locale/ar'
 import { PASSWORD, USERNAME } from '../../config/env-data'
 
-
-
 test('signIn button disabled when incorrect data inserted', async ({ page }) => {
   const authPage = new LoginPage(page)
   await authPage.open()

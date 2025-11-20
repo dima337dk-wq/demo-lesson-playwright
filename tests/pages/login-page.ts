@@ -3,7 +3,7 @@ import { SERVICE_URL } from '../../config/env-data'
 import { OrderPage } from './order-page'
 import BasePage from './base-page'
 
-export class LoginPage extends BasePage{
+export class LoginPage extends BasePage {
   readonly signInButton: Locator
   readonly usernameField: Locator
   readonly passwordField: Locator

@@ -2,8 +2,7 @@ import BasePage from './base-page'
 import { Locator, Page } from '@playwright/test'
 import { SERVICE_URL } from '../../config/env-data'
 
-
-export default  class NotFoundPage extends BasePage {
+export default class NotFoundPage extends BasePage {
   readonly title: Locator
   readonly description: Locator
 
@@ -12,5 +11,4 @@ export default  class NotFoundPage extends BasePage {
     this.title = this.page.locator('.not-found__title')
     this.description = this.page.locator('.not-found__description')
   }
-
 }

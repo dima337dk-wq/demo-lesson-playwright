@@ -21,7 +21,6 @@ export class OrderPage extends BasePage {
   readonly orderIdInputField: Locator
   readonly trackButton: Locator
 
-
   constructor(page: Page, url?: string) {
     super(page, url ? url : SERVICE_URL)
     this.statusButton = page.getByTestId('openStatusPopup-button')
@@ -33,7 +32,9 @@ export class OrderPage extends BasePage {
 
     // creation popup
     this.successfulCreationPopup = page.locator('main > .popup')
-    this.okButton = this.successfulCreationPopup.getByTestId('orderSuccessfullyCreated-popup-ok-button')
+    this.okButton = this.successfulCreationPopup.getByTestId(
+      'orderSuccessfullyCreated-popup-ok-button',
+    )
     this.codeSpan = this.successfulCreationPopup.locator('.notification-popup__text').nth(1)
 
     // search popup elements
@@ -76,6 +77,6 @@ export class OrderPage extends BasePage {
     const text = await this.codeSpan.innerText() // Traching code: 13223
     const strArray = text.split(' ')
 
-    return Number(strArray[strArray.length -1])
+    return Number(strArray[strArray.length - 1])
   }
 }

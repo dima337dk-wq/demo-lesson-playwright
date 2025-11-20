@@ -31,7 +31,7 @@ test('tl-17-6 login and create order and check order found page', async ({ page 
   const orderInfo = {
     name: 'order',
     phoneField: '679579679',
-    comment: 'comment'
+    comment: 'comment',
   }
 
   const orderCreationPage = await authPage.signIn(USERNAME, PASSWORD)
